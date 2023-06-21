@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Miss+Fajardose&family=Zen+Old+Mincho:wght@400;900&display=swap');
+
+        body {
+            background-color: black;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        #main_top {
+            font-family: 'Miss Fajardose', cursive;
+            font-size: 100px;
+        }
+
+        #inpuu[type="text"] {
+            margin-top: 15%;
+            background-color: rgba(240, 248, 255, 0);
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+            display: block;
+            width: 20%;
+        }
+
+        #inpuu[type='text']:focus {
+            outline: none;
+        }
+
+        #inpuu[type='text']:focus::after {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main_top">
+        <p>Enter your ID and password.</p>
+    </div>
+    <div>
+        <input type="text" id="inpuu">
+    </div>
+    <script>
+        var btn = document.getElementById('inpuu');
+
+        // Enterキー押下時、送信処理が実行する
+        window.document.onkeydown = function (event) {
+            if (event.key === 'Enter') {
+                if (btn.value=="yamatoyamato") {
+                    open('');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
